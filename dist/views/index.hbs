@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Search</title>
+    <link rel="stylesheet" href="/styles.css">
+    {{> head }}
+</head>
+<body>
+    <div class="container">
+        <h1>User Search</h1>
+        <form id="searchForm" class="form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Number:</label>
+                <input type="text" id="number" name="number" pattern="\d{2}-\d{2}-\d{2}">
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </form>
+        <div id="loading" class="loading" style="display:none;">Loading...</div>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
+
